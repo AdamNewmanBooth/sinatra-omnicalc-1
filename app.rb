@@ -2,12 +2,12 @@ require "sinatra"
 require "sinatra/reloader"
 
 get("/") do
-erb(:hello)
+"<h1>howdy</h1>"
 end
 
-get("/") do
-  "
-  <h1>Welcome to your Sinatra App!</h1>
-  <p>Define some routes in app.rb</p>
-  "
+get("/square/new") do
+  erb(:new_square_cal)
+  
+get("/square/results")
+  erb(:square_results)
 end
