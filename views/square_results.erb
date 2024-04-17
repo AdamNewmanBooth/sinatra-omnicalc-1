@@ -1,21 +1,13 @@
-<h1>Results of square calcualtion</h1>>
+<h1>Results of square calculation</h1>
 
 <dl>
-<dt>
-Number
-</dt>
-<dd>
-<%=params.fetch("users_number"%>
-</dd>
+  <dt>Number</dt>
+  <dd><%= params.fetch("users_number") %></dd>
 
-<dt>
-Square
-</dt>
-<dd>
-<%=params.fetch("users_number")_to.f * params.fetch("users_number")_to.f%>
-</dd>
+  <dt>Square</dt>
+  <dd><%= (params.fetch("users_number").to_f * params.fetch("users_number").to_f).to_s %></dd>
 </dl>
 
-<a href="=/square/new">
-Calculate another square
+<a href="/square/new">
+  Calculate another square
 </a>

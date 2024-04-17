@@ -7,7 +7,7 @@ end
 
 get("/square/new") do
   erb(:new_square_cal)
-  
-get("/square/results")
+end 
+get("/square/results") do
   erb(:square_results)
 end
