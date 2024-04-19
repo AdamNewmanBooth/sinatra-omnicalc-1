@@ -2,16 +2,25 @@
 
 <dl>
 <dt>APR</dt>
-<dd><%= (params.fetch("APR").to_f / 1200).round(2).to_s + '%' %></dd>
+<dd><%= (params.fetch("APR").to_f / 1200).round(2).to_s + '%' %></dd> <br>
 
   <dt>Number of years</dt>
-  <dd><%= (params.fetch("years").to_i %> * 12</dd>
+  <dd><%= (params.fetch("years").to_i * 12 %></dd><br>
 
 <dt>Principal</dt>
-  <dd><%= (params.fetch("principal").to_i
+  <dd><%= (params.fetch("principal").to_i%><br>
 
-</dl>
 
-<a href="/square/new">
-  Calculate another square
+<%Monthly_rate = (params.fetch("APR").to_f / 1200).round(2).to_i%>
+<%Total_months = (params.fetch("years").to_i * 12 %>
+
+<%Present_value = (params.fetch("principal").to_i / (1+ Monthly_rate) ** Total_months%>
+
+<dt>Payment</dt>
+  <dd><%= (Monthly_rate * Present_value) / (1-(1 + Monthly_rate) ** (-1 * Total_months) %>
+
+</dl><br>
+
+<a href="/payment/new">
+  Calculate another payment
 </a>
