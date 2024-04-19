@@ -1,11 +1,14 @@
-<h1>Square results</h1>
+<h1>Random Results</h1>
 
 <dl>
-  <dt>Number</dt>
-  <dd><%= params.fetch("users_number") %></dd>
+  <dt>Minimum</dt>
+  <dd><%= params.fetch("minimum") %></dd>
 
-  <dt>Square</dt>
-  <dd><%= (params.fetch("users_number").to_f * params.fetch("users_number").to_f).to_s %></dd>
+  <dt>Maximum</dt>
+  <dd><%= (params.fetch("maximum") %></dd>
+
+<dt>Random Number</dt>
+<dd><%= rand(params.fetch("minimum").to_i..params.fetch("maximum").to_i).to_s %></dd>
 </dl>
 
 <a href="/square/new">

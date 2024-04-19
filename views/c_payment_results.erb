@@ -1,11 +1,15 @@
-<h1>Square results</h1>
+<h1>Payment Results</h1>
 
 <dl>
-  <dt>Number</dt>
-  <dd><%= params.fetch("users_number") %></dd>
+<dt>APR</dt>
+<dd><%= (params.fetch("APR").to_f * 100).round(2).to_s + '%' %></dd>
 
-  <dt>Square</dt>
-  <dd><%= (params.fetch("users_number").to_f * params.fetch("users_number").to_f).to_s %></dd>
+  <dt>Number of years</dt>
+  <dd><%= (params.fetch("years").to_s %></dd>
+
+<dt>Principal</dt>
+  <dd><%= (params.fetch("principal").to_i
+
 </dl>
 
 <a href="/square/new">
