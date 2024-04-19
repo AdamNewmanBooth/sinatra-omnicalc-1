@@ -2,10 +2,10 @@
 
 <dl>
 <dt>APR</dt>
-<dd><%= (params.fetch("APR").to_f * 100).round(2).to_s + '%' %></dd>
+<dd><%= (params.fetch("APR").to_f / 1200).round(2).to_s + '%' %></dd>
 
   <dt>Number of years</dt>
-  <dd><%= (params.fetch("years").to_s %></dd>
+  <dd><%= (params.fetch("years").to_i %> * 12</dd>
 
 <dt>Principal</dt>
   <dd><%= (params.fetch("principal").to_i
